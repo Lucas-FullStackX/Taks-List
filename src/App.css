@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.destroy {
+  color: #ff2929;
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.edit {
+  width: 70%;
+  padding: 5px
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.taksApp {
+  width: 70%;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.newTak {
+  width: 90%;
+  padding: 15px;
+  border-radius: 15px;
+  margin: auto
+}
+
+.view {
+  background-color: #2929294d;
+  margin: auto;
+  height: 8vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.view label {
+  font-size: 20px;
+  width: 80%;
+  color: #fff
+}
+
+.header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.taksApp h1 {
+  text-align: center;
+  color: #fff
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+  width: 100%;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  padding: 0
+}
+
+svg {
+  color: #fff;
+  font-size: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+}
+
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(8, 158, 28);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
 }

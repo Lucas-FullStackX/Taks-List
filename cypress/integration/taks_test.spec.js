@@ -22,6 +22,7 @@ describe("Taks List", () => {
     cy.get('[data-test-id="inputEdit"]')
       .first()
       .click()
+      .type("{backspace}")
       .type("play the piano")
       .type("{enter}");
     cy.contains("play the piano");
